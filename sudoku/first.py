@@ -224,7 +224,7 @@ def test_move_scan_and_matrix():
     m = SudokuMatrix()
     s = SudokuRobot()
 
-    for i in range(0, 20):
+    for i in range(0, 60):
         s.move_forward()
         print("Moved to ", s.get_coords())
         time.sleep(0.2)
