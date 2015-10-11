@@ -224,20 +224,20 @@ def test_move_scan_and_matrix():
     m = SudokuMatrix()
     s = SudokuRobot()
 
-    for i in range(0, 60):
+    for i in range(0, 160):
         s.move_forward()
         print("Moved to ", s.get_coords())
-        time.sleep(0.2)
-        for j in range(0, 4):
+        time.sleep(0.1)
+        for j in range(0, 2):
             print("Scan ", j)
             meas = s.one_scan()
             if j % 2:
                 meas = meas[::-1]
             coords = s.get_coords()
             m.add_scan(coords[0], coords[1], 120, meas)
-            time.sleep(0.2)            
+            time.sleep(0.1)            
     s.reset()
-    m.dump_to_file('new_center_scan.txt')
+    m.dump_to_file('slim_right.txt')
 
 def test_one_scan_matrix():
     m = SudokuMatrix()
